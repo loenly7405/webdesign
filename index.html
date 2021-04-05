@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TRANG CHỦ</title>
+	<style type="text/css">
+	body {
+  background: url('images/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: no-repeat;
+  -moz-background-size: fixed;
+  -o-background-size: 100% 100%;
+  background-size: ;
+  }
+  	.content{
+  		width: 80%;
+  		background-color: white;
+  		margin-left: 10%;
+  		margin-top: 10%;
+  		padding-top: 5%;
+  		padding-bottom: 5%;
+  		padding-left: 5%;
+  		text-align: center;
+  	}
+  	.text-center{
+  		text-align: center;
+  	}
+  	.button{
+  		padding: 18px;
+  		font-weight: bolder;
+  		font-size: 20px;
+  	}
+  	.yes-btn {
+  		position: absolute;
+  		top: 40%;
+  		left: 43%;
+  		background-color: #FF99CC;
+  	}
+  	.no-btn{
+  		position: absolute;
+  		top: 40%;
+  		left: 60%;
+  		background-color: #CC99FF;
+  	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header></header>
+		<div class="content">
+			<h1>Anh ăn tối chưa nhở?</h1>
+			<a href="success.html"><button class="button yes-btn"></button>
+			<button class="button yes-btn">Rồi</button>
+			<button id="ignore" onmouseover="changelocation()" class="button no-btn">Chưa</button>
+		</div>
+		<footer></footer>
+	</div>
+	<script type="text/javascript">
+		function changelocation() {
+			var randomNumberleft = getrandomInt(50,80);
+			var randomNumbertop = getrandomInt(40,60);
+			document.getElementById('ignore').style.left = randomNumberleft+'%';
+			document.getElementById('ignore').style.top = randomNumbertop+'%';
+		}
+
+		function getrandomInt(min,max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min) + min);
+		}
+	</script>
+</body>
+</html>
